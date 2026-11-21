@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800"><defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07151c"/><stop offset=".55" stop-color="#102936"/><stop offset="1" stop-color="#174454"/></linearGradient>
+<linearGradient id="line" x2="1"><stop stop-color="#60dacd"/><stop offset="1" stop-color="#a0f6b4"/></linearGradient>
+<filter id="shade" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-opacity=".3"/></filter>
+</defs>
+<rect width="1440" height="800" fill="url(#bg)"/>
+<circle cx="1370" cy="100" r="260" fill="#36afa0" opacity=".045"/><circle cx="1140" cy="760" r="360" fill="#6fdcce" opacity=".035"/>
+<text x="80" y="101" font-family="Arial,sans-serif" font-size="64" font-weight="700" fill="#effafd" letter-spacing="-2">WallSight <tspan fill="#77e6d6">360</tspan></text>
+<text x="82" y="149" font-family="Arial,sans-serif" font-size="25" fill="#a9cbd2">ROOM MAPPING · PERSON TRACKING · ESP32-S3</text>
+<rect x="80" y="181" width="220" height="34" rx="17" fill="#173941" stroke="#2b6268"/>
+<text x="98" y="204" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#a5f1d1">PLATFORMIO PROTOTYPE</text>
+<g filter="url(#shade)">
+<rect x="74" y="251" width="830" height="475" rx="30" fill="#142f3b" stroke="#376170" stroke-width="2.5"/>
+<rect x="100" y="276" width="778" height="425" rx="17" fill="#0c202a"/>
+<text x="135" y="320" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#e6f5f6">LIVE ROOM MAP</text>
+<rect x="773" y="298" width="78" height="30" rx="15" fill="#1a4942"/><text x="789" y="319" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#a7f6bd">● LIVE</text>
+<g transform="translate(170,307)">
+<circle cx="235" cy="204" r="62" fill="none" stroke="#315868" stroke-width="1.7" stroke-dasharray="5 8"/><circle cx="235" cy="204" r="124" fill="none" stroke="#315868" stroke-width="1.7" stroke-dasharray="5 8"/><circle cx="235" cy="204" r="186" fill="none" stroke="#315868" stroke-width="1.7" stroke-dasharray="5 8"/>
+<line x1="49" y1="204" x2="421" y2="204" stroke="#315868" stroke-width="1.6"/>
+<line x1="235" y1="18" x2="235" y2="390" stroke="#315868" stroke-width="1.6"/>
+<path d="M115 83 L115 42 L351 42 L351 127 L410 127 L410 344 L86 344 L86 278 L40 278 L40 132 L115 132" fill="none" stroke="url(#line)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M235 204 L172 110 A110 110 0 0 1 300 110 Z" fill="#31bd9b" fill-opacity=".18"/>
+<circle cx="235" cy="204" r="7" fill="#d7fff4" stroke="#fff" stroke-width="2"/>
+<circle cx="211" cy="133" r="14" stroke="#ffb376" fill="none" opacity=".58" stroke-width="2"/><circle cx="211" cy="133" r="7" fill="#ffb376"/>
+<circle cx="296" cy="169" r="14" stroke="#ffb376" fill="none" opacity=".58" stroke-width="2"/><circle cx="296" cy="169" r="7" fill="#ffb376"/>
+<text x="191" y="116" font-family="Arial,sans-serif" font-weight="bold" font-size="14" fill="#ffd3a7">P1</text><text x="308" y="160" font-family="Arial,sans-serif" font-weight="bold" font-size="14" fill="#ffd3a7">P2</text>
+</g>
+<line x1="677" y1="348" x2="677" y2="657" stroke="#2f5662" stroke-width="1.5"/>
+<text x="700" y="377" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#d7eff1">SYSTEM</text>
+<text x="700" y="412" font-family="Arial,sans-serif" font-size="17" fill="#a8c8cf">SCAN · stored</text>
+<text x="700" y="444" font-family="Arial,sans-serif" font-size="17" fill="#a8c8cf">360 stable bins</text>
+<text x="700" y="477" font-family="Arial,sans-serif" font-size="17" fill="#a8c8cf">5 line segments</text>
+<text x="700" y="510" font-family="Arial,sans-serif" font-size="17" fill="#a8c8cf">2 people</text>
+<rect x="697" y="543" width="86" height="31" rx="9" fill="#18463f"/><text x="711" y="564" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#a4edb8">LD19 OK</text>
+<rect x="697" y="582" width="108" height="31" rx="9" fill="#18463f"/><text x="711" y="603" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#a4edb8">LD2450 OK</text>
+</g>
+<g font-family="Arial,sans-serif">
+<rect x="944" y="251" width="416" height="475" rx="30" fill="#13313f" stroke="#335d6a" stroke-width="2.5"/>
+<text x="984" y="319" font-size="32" font-weight="700" fill="#ecfafb">See the room.</text>
+<text x="984" y="362" font-size="32" font-weight="700" fill="#80e8d3">Track movement.</text>
+<line x1="984" y1="392" x2="1319" y2="392" stroke="#2e5361"/>
+<text x="984" y="436" font-size="20" fill="#b8d6dc">360° LiDAR surface scanning</text>
+<text x="984" y="479" font-size="20" fill="#b8d6dc">Wall-like segment extraction</text>
+<text x="984" y="522" font-size="20" fill="#b8d6dc">Persistent flash map</text>
+<text x="984" y="565" font-size="20" fill="#b8d6dc">Real-time mmWave targets</text>
+<rect x="982" y="611" width="340" height="77" rx="14" fill="#0e2430" stroke="#2f4f5e"/>
+<text x="1001" y="642" font-size="17" fill="#b0ced5">Concept illustration only.</text><text x="1001" y="668" font-size="17" fill="#b0ced5">Stable furniture may resemble walls.</text>
+</g></svg>
