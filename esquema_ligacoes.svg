@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 760" width="1150" height="760">
+<style>
+.bg{fill:#0b1620}.card{fill:#152833;stroke:#34545e;stroke-width:2}.title{font:bold 28px Arial,sans-serif;fill:#eef8fb}.h{font:bold 20px Arial,sans-serif;fill:#e4f5f7}.txt{font:16px Arial,sans-serif;fill:#d2e5e8}.small{font:14px Arial,sans-serif;fill:#b3ccd0}.mono{font:16px monospace;fill:#dbeef1}.note{fill:#233b43;stroke:#647b80;stroke-width:1.2}.line{stroke:#4fd6c9;stroke-width:2.4;fill:none}.orange{stroke:#f5a76b;stroke-width:2.4;fill:none}.violet{stroke:#9f96ed;stroke-width:2.4;fill:none}.power{stroke:#f3777b;stroke-width:2.4;fill:none}
+</style>
+<rect width="1150" height="760" fill="#0b1620"/>
+<text x="35" y="46" class="title">RADAR 360 / V2 — mapa persistente + alvos mmWave</text>
+<text x="36" y="75" class="small">Fonte 5 V regulada; GND de todos os componentes em comum; sinais GPIO sempre 3,3 V.</text>
+<rect x="383" y="122" width="378" height="447" rx="18" class="card"/>
+<text x="415" y="160" class="h">ESP32-S3 DevKitC-1</text>
+<text x="415" y="188" class="small">Firmware Arduino · NVS/flash guarda mapa</text>
+<text x="415" y="238" class="mono">GPIO15   UART2 RX   LD19 TX</text>
+<text x="415" y="291" class="mono">GPIO4    UART1 RX   LD2450 TX</text>
+<text x="415" y="323" class="mono">GPIO5    UART1 TX   LD2450 RX</text>
+<text x="415" y="376" class="mono">GPIO12   SPI SCK</text>
+<text x="415" y="405" class="mono">GPIO11   SPI MOSI</text>
+<text x="415" y="434" class="mono">GPIO10   TFT CS</text>
+<text x="415" y="463" class="mono">GPIO9    TFT DC</text>
+<text x="415" y="492" class="mono">GPIO8    TFT RST</text>
+<text x="415" y="537" class="mono">GPIO47   BOTÃO -> GND</text>
+<rect x="35" y="138" width="291" height="164" rx="14" class="card"/>
+<text x="61" y="174" class="h">LiDAR LD19 (360°)</text>
+<text x="61" y="206" class="mono">TX   -> GPIO15</text>
+<text x="61" y="235" class="mono">PWM  -> em aberto*</text>
+<text x="61" y="263" class="mono">5V + GND comuns</text>
+<path d="M326 205H355V233H383" class="orange"/>
+<rect x="35" y="351" width="291" height="170" rx="14" class="card"/>
+<text x="61" y="387" class="h">mmWave LD2450</text>
+<text x="61" y="421" class="mono">TX -> GPIO4</text>
+<text x="61" y="451" class="mono">RX &lt;- GPIO5</text>
+<text x="61" y="482" class="mono">5V + GND comuns</text>
+<path d="M326 419H353V286H383" class="orange"/>
+<path d="M326 448H362V321H383" class="orange"/>
+<rect x="826" y="151" width="291" height="336" rx="14" class="card"/>
+<text x="852" y="188" class="h">ILI9341 SPI · 2,8"</text>
+<text x="852" y="219" class="mono">SCK    &lt;- GPIO12</text>
+<text x="852" y="248" class="mono">MOSI   &lt;- GPIO11</text>
+<text x="852" y="277" class="mono">CS     &lt;- GPIO10</text>
+<text x="852" y="306" class="mono">DC     &lt;- GPIO9</text>
+<text x="852" y="335" class="mono">RST    &lt;- GPIO8</text>
+<text x="852" y="384" class="mono">GND -> GND</text>
+<text x="852" y="413" class="mono">VCC / BL: ver módulo</text>
+<text x="852" y="450" class="small">Lógica SPI sempre 3,3 V</text>
+<path d="M761 378H803V214H826" class="line"/>
+<path d="M761 405H808V244H826" class="line"/>
+<path d="M761 434H814V273H826" class="line"/>
+<path d="M761 463H820V302H826" class="line"/>
+<path d="M761 492H824V331H826" class="line"/>
+<rect x="35" y="595" width="1082" height="98" rx="14" class="note"/>
+<text x="60" y="628" class="h">ALIMENTAÇÃO E CONTROLO</text>
+<text x="60" y="657" class="txt">5 V / 2 A -> ESP32 (USB-C), LD19, LD2450  |  GND comum  |  botão normalmente aberto GPIO47 -> GND</text>
+<text x="36" y="723" class="small">* No LD19 genuíno, o pino PWM em Hi-Z usa a velocidade interna. Confirmar documentação da variante comprada.</text>
+<text x="36" y="744" class="small">Sinais SPI azul; UART laranja. O esquema é funcional, não um diagrama de PCB ou de segurança elétrica.</text>
+</svg>
