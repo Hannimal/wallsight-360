@@ -6,7 +6,18 @@
 
 [![PlatformIO](https://img.shields.io/badge/PlatformIO-ESP32--S3-orange)](https://platformio.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+[🇵🇹 README em Português](README.md) · [🇬🇧 English README](README_EN.md)
+
 ---
+
+## Visão geral visual
+
+![WallSight 360 — hero](assets/hero-radar-map.svg)
+
+O projeto combina um **LiDAR 360°** para medir superfícies, um **mmWave frontal** para localizar pessoas, e um **ESP32-S3** para fundir os dados, guardar o mapa na flash e desenhar tudo num ecrã **ILI9341**.
+
+![Arquitetura do sistema](assets/system-overview.svg)
+
 
 **Versão 0.2 · PlatformIO · Protótipo experimental · ESP32-S3 DevKitC-1 N8R8 + LDROBOT LD19 + HLK-LD2450 + TFT SPI ILI9341 320×240**
 
@@ -51,9 +62,11 @@ Atenção: o nome ILI9341 refere-se ao controlador, e módulos com o mesmo nome 
 
 **Alimentação:** usar uma única fonte 5 V regulada e uma topologia de distribuição adequada (USB-C ao ESP32 e 5 V aos sensores). Não usar várias fontes de 5 V em paralelo sem isolamento e não tentar alimentar os dois sensores pelo pino 3V3 do ESP32. Todos os GND devem estar comuns.
 
+![Esquema de ligações](esquema_ligacoes.svg)
+
 **Montagem:** fixar o LD19 horizontalmente, com visão livre de 360°. Fixar o LD2450 na mesma base e apontar o seu eixo frontal para a direção de 0° definida para o mapa. Idealmente colocar o LiDAR à altura das superfícies verticais que queres medir, sem pernas de mesas/sofás a obstruir o plano.
 
-Ver `esquema_ligacoes.svg`.
+O mesmo esquema está disponível no ficheiro `esquema_ligacoes.svg`.
 
 ## 3. PlatformIO — compilar, flash e monitor série
 
@@ -69,6 +82,10 @@ wallsight-360/
 ├── include/
 │   ├── radar_protocol.h   # Protocolo LD19 e LD2450
 │   └── wall_map.h         # Mapeamento e persistência
+├── assets/
+│   ├── hero-radar-map.svg # Imagem principal do projeto
+│   ├── system-overview.svg
+│   └── ui-live-screen.svg
 ├── tests/
 │   ├── protocol_tests.cpp # Testes C++ sem hardware
 │   └── map_tests.cpp
@@ -91,6 +108,8 @@ Dependências `Adafruit GFX Library`, `Adafruit ILI9341` e `Adafruit BusIO` são
 **Estado:** os testes de lógica C++ foram executados sem hardware. Não foi possível executar `pio run` neste ambiente, pois o PlatformIO CLI não está instalado. A compilação ESP32-S3 e os testes com sensores e ecrã reais permanecem por validar.
 
 ## 4. Interface — modos
+
+![Mockup do ecrã em modo LIVE](assets/ui-live-screen.svg)
 
 ### SCAN (primeira utilização)
 
